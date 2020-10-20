@@ -1,0 +1,24 @@
+###prokka (version 1.14.5) run in a for loop
+#Annotation of genomes
+```
+for file in *.fna; do tag=$file%.fna`; prokka --prefix "$tag" --locustag "$tag" --genus Streptococcus – species uberis --strain "$tag" --outdir "$tag"_prokka --force --addgenes "$file"; done
+```
+
+###roary (version 3.13.0)
+#Pangenone analysis
+```
+roary -e --mafft -i 90 -v -p 6 -z -s -o 
+```
+
+###RAxML (version 8.2.10)
+#Core genome phylogeny
+```
+raxmlHPC-PTHREADS-SSE3 -f a -x 123 -p 123 -N 1000 -m GTRGAMMA -O -n
+```
+
+
+###grep (version 3.1)
+#Used to identify putative sortase substrates
+```
+egrep -B 1 'LP.TG|LP...D|LP.TA|QVPTGV|LPSTGE' input.faa > output.faa
+```

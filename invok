@@ -1,7 +1,0 @@
-###prokka commands
-#prokka (version 1.14.5) run in a for loop
-```
-for file in *.fna; do tag=$file%.fna`; prokka --prefix "$tag" --locustag "$tag" --genus Streptococcus – species uberis --strain "$tag" --outdir "$tag"_prokka --force --addgenes "$file"; done
-```
-
-
